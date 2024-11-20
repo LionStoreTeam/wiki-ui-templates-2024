@@ -1,0 +1,31 @@
+# Comandos npm/npx usados
+# - Prisma ORM
+    - npm install prisma --save-dev
+    - npx prisma init --datasource-provider postgresql
+    - npx prisma generate
+    - npx prisma migrate dev --name init
+    - npm install @next-auth/prisma-adapter --legacy-peer-deps
+    - npx prisma migrate deploy ---- Despliegue de plisma en modo production 
+
+# - AWS S3
+    - npm install @aws-sdk/client-s3 --legacy-peer-deps
+    - npm install @aws-sdk/lib-storage --legacy-peer-deps
+    * npm install @aws-sdk/s3-request-presigner
+
+# - NextAuth.js
+    - npm install next-auth --legacy-peer-deps
+    - npx auth generate // Generar un secret key para NextAuth
+
+# - Bcryptjs
+    - npm install bcryptjs --legacy-peer-deps
+    - npm install @types/bcryptjs --legacy-peer-deps
+
+# UI Elements
+    - npm install framer-motion --legacy-peer-deps
+    - npm install react-type-animation
+    - npm install @radix-ui/themes
+    - npm install react-hot-toast
+    - npm install react-icons --save
+
+# Form
+    - npm install react-hook-form
