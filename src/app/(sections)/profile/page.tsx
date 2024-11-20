@@ -7,7 +7,7 @@ import { useSession } from "next-auth/react";
 import { TypeAnimation } from "react-type-animation";
 
 function DashboardPage() {
-    const { data: session, status, update } = useSession();
+    const { data: session, status } = useSession();
     if (status === "loading") {
         return <div>Loading...</div>;
     }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 
@@ -103,7 +104,7 @@ export default function ResourceGallery() {
                             className="border-2 border-slate-800 rounded-xl overflow-hidden shadow-lg shadow-slate-700 transition-all transform ease-in hover:scale-105 duration-300 opacity-70 hover:opacity-100"
                         >
                             {/* Imagen de previsualización */}
-                            <img
+                            <Image
                                 src={resource.previewUrl}
                                 alt={resource.title}
                                 className="w-full h-40 object-cover"

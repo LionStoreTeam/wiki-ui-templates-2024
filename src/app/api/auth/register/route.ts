@@ -172,7 +172,7 @@ export async function POST(request: Request) {
       },
     });
 
-    const { password: _, ...User } = newUser;
+    const { password, ...User } = newUser;
 
     return NextResponse.json(User);
   } catch (error: any) {
