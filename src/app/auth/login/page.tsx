@@ -7,46 +7,14 @@ import { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 
-const {
-    register,
-    handleSubmit,
-    formState: { errors },
-} = useForm();
 
-function SearchEmail() {
-    return <input
-        {...register("email", {
-            required: {
-                value: true,
-                message: "El correo es requerido",
-            },
-        })}
-        autoComplete="off"
-        id="email"
-        name="email"
-        type="email"
-        className="mb-3 w-full rounded-2xl bg-zinc-100 outline-rose-400 px-5 py-3"
-        placeholder="correo@gmail.com"
-    />
-}
-function SearchPassword() {
-    return <input
-        {...register("password", {
-            required: {
-                value: true,
-                message: "La contraseña es requerida",
-            },
-        })}
-        autoComplete="off"
-        id="password"
-        name="password"
-        type="password"
-        className="mb-3 w-full rounded-2xl bg-zinc-100 outline-rose-400 px-5 py-3"
-        placeholder="••••••••••"
-    />
-}
 
 export default function LoginPage() {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
     const router = useRouter();
     const [error, setError] = useState("");
     const [showsucces, setShowsuccess] = useState(false);
@@ -74,7 +42,6 @@ export default function LoginPage() {
             router.refresh();
         }
     });
-
 
     return (
         <div className="">
@@ -202,13 +169,39 @@ export default function LoginPage() {
                                             Inicio de Sesión
                                         </h1>
                                         <br />
-                                        <SearchEmail />
+                                        <input
+                                            {...register("email", {
+                                                required: {
+                                                    value: true,
+                                                    message: "El correo es requerido",
+                                                },
+                                            })}
+                                            autoComplete="off"
+                                            id="email"
+                                            name="email"
+                                            type="email"
+                                            className="mb-3 w-full rounded-2xl bg-zinc-100 outline-rose-400 px-5 py-3"
+                                            placeholder="correo@gmail.com"
+                                        />
                                         {errors.email && (
                                             <span className="text-red-500">
                                                 {errors.email.message?.toString()}
                                             </span>
                                         )}
-                                        <SearchPassword />
+                                        <input
+                                            {...register("password", {
+                                                required: {
+                                                    value: true,
+                                                    message: "La contraseña es requerida",
+                                                },
+                                            })}
+                                            autoComplete="off"
+                                            id="password"
+                                            name="password"
+                                            type="password"
+                                            className="mb-3 w-full rounded-2xl bg-zinc-100 outline-rose-400 px-5 py-3"
+                                            placeholder="••••••••••"
+                                        />
                                         {errors.password && (
                                             <span className="text-red-500">
                                                 {errors.password.message?.toString()}
