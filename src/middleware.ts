@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+// import { NextResponse } from "next/server";
+// import type { NextRequest } from "next/server";
 export { default } from "next-auth/middleware";
 
 // export default withAuth(
@@ -22,11 +22,11 @@ export { default } from "next-auth/middleware";
 //   }
 // );
 // ----------------------------------------------------------------
-export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname.startsWith("/auth/login?callbackUrl=")) {
-    return NextResponse.rewrite(new URL("/auth/login", request.url));
-  }
-}
+// export function middleware(request: NextRequest) {
+//   if (request.nextUrl.pathname.startsWith("/dashboard")) {
+//     return NextResponse.rewrite(new URL("/dashboard/user", request.url));
+//   }
+// }
 
 // Configuración de las rutas protegidas
 export const config = {
