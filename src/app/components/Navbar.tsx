@@ -90,12 +90,12 @@ const Navbar = () => {
     };
 
     return (
-        <div className="welcome w-full flex justify-between items-center bg-white h-[7rem] px-4">
+        <div className="welcome w-full flex justify-between items-center h-[7rem] px-4">
             {/* LINKS */}
             <div className="hidden md:flex gap-4 justify-center items-center">
                 {/* Logo */}
                 <Link href="/" className="pr-8">
-                    <Image src="/base_logo/wiki_ui_logo_white.png" alt="" width={70} height={70} />
+                    <Image src="/base_logo/wiki_ui_logo_white.png" alt="wiki_ui_logo" width={70} height={70} />
                 </Link>
 
                 {/* Desktop Navigation */}
