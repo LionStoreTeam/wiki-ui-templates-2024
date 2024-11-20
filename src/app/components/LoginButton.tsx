@@ -10,7 +10,7 @@ export default function LoginButton() {
     return (
         <div className="flex gap-2">
             <button onClick={async () => {
-                const result = await signIn("google", {
+                await signIn("google", {
                     callbackUrl: "/",
                     redirect: false
                 });
@@ -18,7 +18,7 @@ export default function LoginButton() {
                 <Image src="/GoogleButton.png" alt="google_icon_buton_login" width={25} height={25} />
             </button>
             <button onClick={async () => {
-                const result = await signIn("github", {
+                await signIn("github", {
                     callbackUrl: "/",
                     redirect: false,
                 });

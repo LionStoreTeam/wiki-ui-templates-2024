@@ -48,8 +48,8 @@ export async function GET() {
 
       // Establecer los metadatos (simulación por el momento)
       const category = fileName.split("/")[0]; // La categoría es la subcarpeta dentro de resources
-      const cost = category === "Audio" ? "Gratis" : "Pago"; // Asignar "Gratis" o "Pago" basado en la categoría, puedes modificarlo
-      const price = cost === "Pago" ? "$5" : null; // Precio fijo para los recursos pagos
+      // const cost = category === "Audio" ? "Gratis" : "Pago"; // Asignar "Gratis" o "Pago" basado en la categoría, puedes modificarlo
+      // const price = cost === "Pago" ? "$5" : null; // Precio fijo para los recursos pagos
 
       return {
         title,

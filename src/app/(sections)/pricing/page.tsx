@@ -35,15 +35,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     {description}
                 </p>
                 <div className="mb-9 flex flex-col gap-[14px]">{children}</div>
-                <a
-                    href="/#"
-                    className={`${active
-                        ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium text-white transition hover:bg-opacity-90"
-                        : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
-                        }`}
-                >
-                    {buttonText}
-                </a>
+                className={`${active
+                    ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium text-white transition hover:bg-opacity-90"
+                    : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
+                    }`}
+                {buttonText}
                 <div>
                     <span className="absolute right-0 top-7 z-[-1]">
                         <svg width={77} height={172} viewBox="0 0 77 172" fill="none" xmlns="http://www.w3.org/2000/svg">

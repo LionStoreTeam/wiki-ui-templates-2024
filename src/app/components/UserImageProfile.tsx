@@ -4,7 +4,7 @@ import Link from "next/link";
 Image
 
 const UserImageProfile = () => {
-    const { data: session, status, update } = useSession();
+    const { data: session } = useSession();
     // Función para generar la imagen de perfil con las iniciales
     const getInitialsImage = (name: string) => {
         if (!name) return null;

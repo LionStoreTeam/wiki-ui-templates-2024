@@ -20,7 +20,7 @@ const links = [
 ];
 
 const Navbar = () => {
-    const { data: session, status, update } = useSession();
+    const { data: session } = useSession();
     const [open, setOpen] = useState(false);
     const pathname = usePathname(); // Usamos usePathname para obtener la ruta actual
 

@@ -22,7 +22,6 @@ const NewResourceForm: React.FC = () => {
     const [costType, setCostType] = useState<"Gratis" | "Pago">("Gratis");
     const [price, setPrice] = useState<string | null>(null);
     const [resourceFile, setResourceFile] = useState<File | null>(null);
-    const [uploadedResource, setUploadedResource] = useState<any | null>(null);  // Estado para almacenar el recurso subido
 
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -52,8 +51,6 @@ const NewResourceForm: React.FC = () => {
             });
 
             if (response.ok) {
-                const data = await response.json();
-                setUploadedResource(data.resource);  // Actualizamos el estado con los datos del recurso
                 resourceUploadSucces();
             } else {
                 const error = await response.json();

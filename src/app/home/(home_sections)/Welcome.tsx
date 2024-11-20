@@ -6,7 +6,7 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 const Welcome = () => {
-    const { data: session, status, update } = useSession();
+    const { data: session } = useSession();
     return (
         <div className="welcome min-h-screen w-full px-10 pt-10 flex flex-col text-center justify-center items-center">
             <h1 className="text-slate-200 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-semibold">

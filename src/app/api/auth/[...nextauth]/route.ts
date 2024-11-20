@@ -4,7 +4,7 @@ import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
+// import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "../../../../../lib/prisma";
 
 const handler = NextAuth({
@@ -70,7 +70,7 @@ const handler = NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ user }) {
       // Verifica si el usuario ya existe
       const existingUser = await prisma.usuario.findUnique({
         where: { email: user.email || "" },
