@@ -107,6 +107,8 @@ export default function ResourceGallery() {
                             <Image
                                 src={resource.previewUrl}
                                 alt={resource.title}
+                                width={500}
+                                height={450}
                                 className="w-full h-40 object-cover"
                             />
                             <div className="p-4">

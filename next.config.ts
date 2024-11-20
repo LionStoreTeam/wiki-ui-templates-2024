@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
         hostname: "lh3.googleusercontent.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "firs-bucket-wikiui.s3.us-east-2.amazonaws.com",
+        pathname: "**",
+      },
     ],
   },
 };
