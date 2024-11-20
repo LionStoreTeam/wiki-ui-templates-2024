@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "@radix-ui/themes/styles.css";
-import { Box, Progress } from '@radix-ui/themes';
 
 
 
@@ -145,10 +143,9 @@ export default function ResourceGallery() {
                         </div>
                     ))
                 ) : (
-                    <Box maxWidth="300px">
-                        <Progress />
-                    </Box>
-
+                    <div className="">
+                        <p className="text-center text-sm text-pink-50">No hay recursos disponibles.</p>
+                    </div>
                 )}
             </div>
         </div>
