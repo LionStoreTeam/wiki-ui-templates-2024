@@ -111,9 +111,9 @@ export default function LoginPage() {
                     </button>
                 </div>
                 <div className="pb-6 flex justify-center items-center text-center gap-3 text-slate-400 select-none">
-                    <p>________________</p>
+                    <p>________</p>
                     <p className="pt-3">O</p>
-                    <p>________________</p>
+                    <p>________</p>
                 </div>
                 <div className=""></div>
                 <form onSubmit={onSubmit}>
